@@ -352,6 +352,7 @@ text("score: "+score1,30,50)
        plane.isTouching(planeG2) || plane.isTouching(planeG1)){
     gamestate = "end";
       sh = 0;
+      l=0;
     theme.stop();
     die.play();
     cloudG.setLifetimeEach(-1);
@@ -376,6 +377,12 @@ if (gamestate === "end"){
     textSize(20);
     fill("white");
     text("press enter to restart",width/2-35,height/2+ 30);
+  textSize(30);
+fill("white");
+ text("distance: "+score+"m",width-250,50)
+ textSize(30);
+fill("white");
+text("score: "+score1,30,50)
     if(keyDown("ENTER")){
         gamestate="play";
         plane.changeAnimation("flying",planeFly);
