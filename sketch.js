@@ -145,6 +145,7 @@ function draw() {
         menu.stop();
         die.stop();
         menu.loop();
+      sh = 0;
         gamestate = "no";
         l=0;
         cloudG.destroyEach();
@@ -190,6 +191,7 @@ function draw() {
         if(mousePressedOver(play)){
             plane.visible = true;
              bg.visible = true;
+          sh = 0;
              gamestate = "play";
              menuState = "no";
              menu.stop();
@@ -334,6 +336,7 @@ text("score: "+score1,30,50)
        plane.isTouching(enemyG7) || plane.isTouching(enemyG8) || plane.isTouching(enemyG9) ||
        plane.isTouching(planeG2) || plane.isTouching(planeG1)){
     gamestate = "end";
+      sh = 0;
     theme.stop();
     die.play();
     cloudG.setLifetimeEach(-1);
