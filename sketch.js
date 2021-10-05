@@ -371,18 +371,18 @@ text("score: "+score1,30,50)
      plane.changeAnimation("dead",dead);
 }
 if (gamestate === "end"){
+  textSize(30);
+fill("white");
+ text("distance: "+score+"m",width-250,50)
+ textSize(30);
+fill("white");
+text("score: "+score1,30,50);
     textSize(35);
     fill("white");
     text("game over",width/2-30,height/2)
     textSize(20);
     fill("white");
     text("press enter to restart",width/2-35,height/2+ 30);
-  textSize(30);
-fill("white");
- text("distance: "+score+"m",width-250,50)
- textSize(30);
-fill("white");
-text("score: "+score1,30,50)
     if(keyDown("ENTER")){
         gamestate="play";
         plane.changeAnimation("flying",planeFly);
