@@ -254,64 +254,70 @@ function draw() {
         || bulletG.isTouching(enemyG8) || bulletG.isTouching(enemyG9) || bulletG.isTouching(planeG2) || bulletG.isTouching(planeG1)){
         sh = 0;
     }
-if(bulletG.isTouching(enemyG1) || bulletG.isTouching(enemyG2) || bulletG.isTouching(enemyG3)
-        || bulletG.isTouching(enemyG4) || bulletG.isTouching(enemyG5) || bulletG.isTouching(enemyG6) || bulletG.isTouching(enemyG7)
-        || bulletG.isTouching(enemyG8) || bulletG.isTouching(enemyG9) || bulletG.isTouching(planeG2) || bulletG.isTouching(planeG1)){
-        bi.play();
-    }
       
     if(bulletG.isTouching(enemyG1)){
         bulletG.destroyEach();
         enemyG1.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG2)){
         bulletG.destroyEach();
         enemyG2.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG3)){
         bulletG.destroyEach();
         enemyG3.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG4)){
         bulletG.destroyEach();
         enemyG4.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG5)){
         bulletG.destroyEach();
         enemyG5.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG6)){
         bulletG.destroyEach();
         enemyG6.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG7)){
         bulletG.destroyEach();
         enemyG7.destroyEach();
+      bi.play();
         score1+= 50;
     }
     if(bulletG.isTouching(enemyG8)){
         bulletG.destroyEach();
         enemyG8.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(enemyG9)){
         bulletG.destroyEach();
         enemyG9.destroyEach();
+      bi.play();
         score1 += 50;
     }
     if(bulletG.isTouching(planeG1)){
         bulletG.destroyEach();
+      bi.play();
         life1 -= 1;
         score1 += 100;
     }
     if(bulletG.isTouching(planeG2)){
         bulletG.destroyEach();
+      bi.play();
 life2 -= 1;
 score1 += 100;
     }
