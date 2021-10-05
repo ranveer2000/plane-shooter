@@ -27,6 +27,7 @@ var hows,creds,howsi,credsi;
 var cloudG;
 var die;
 var dead;
+var sho;
 function preload(){
 bgimg = loadImage("Bg.png")
 cloud1 = loadImage("cloud1.png");
@@ -53,6 +54,7 @@ playimg = loadImage("play.png");
   howsi = loadImage("hows.png");
   credsi = loadImage("creds.png");
   die = loadSound("die.wav");
+  sho = loadSound("shoot.mp3");
 }
 
 function setup() {
@@ -237,6 +239,7 @@ function draw() {
     }
 
     if(keyWentUp("SPACE") && sh===0){
+      sho.play();
         bulletshoot();
         sh=1;
     }
