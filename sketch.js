@@ -27,7 +27,7 @@ var hows,creds,howsi,credsi;
 var cloudG;
 var die;
 var dead;
-var sho;
+var sho,bi;
 function preload(){
 bgimg = loadImage("Bg.png")
 cloud1 = loadImage("cloud1.png");
@@ -55,6 +55,7 @@ playimg = loadImage("play.png");
   credsi = loadImage("creds.png");
   die = loadSound("die.wav");
   sho = loadSound("shoot.mp3");
+  bi = loadSound("bi.mp3");
 }
 
 function setup() {
@@ -253,7 +254,12 @@ function draw() {
         || bulletG.isTouching(enemyG8) || bulletG.isTouching(enemyG9) || bulletG.isTouching(planeG2) || bulletG.isTouching(planeG1)){
         sh = 0;
     }
-
+if(bulletG.isTouching(enemyG1) || bulletG.isTouching(enemyG2) || bulletG.isTouching(enemyG3)
+        || bulletG.isTouching(enemyG4) || bulletG.isTouching(enemyG5) || bulletG.isTouching(enemyG6) || bulletG.isTouching(enemyG7)
+        || bulletG.isTouching(enemyG8) || bulletG.isTouching(enemyG9) || bulletG.isTouching(planeG2) || bulletG.isTouching(planeG1)){
+        bi.play();
+    }
+      
     if(bulletG.isTouching(enemyG1)){
         bulletG.destroyEach();
         enemyG1.destroyEach();
