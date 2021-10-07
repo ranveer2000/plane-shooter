@@ -313,21 +313,21 @@ function draw() {
         bulletG.destroyEach();
       bi.play();
         life1 -= 1;
-        score1 += 100;
     }
     if(bulletG.isTouching(planeG2)){
         bulletG.destroyEach();
       bi.play();
 life2 -= 1;
-score1 += 100;
     }
 if(life1===0){
     life1=3;
     planeG1.destroyEach();
+  score1 += 100;
 }
 if(life2===0){
     life2=3;
     planeG2.destroyEach();
+  score1 += 100;
 }
     if(enemyG1.isTouching(invisible1) || enemyG2.isTouching(invisible1) || enemyG3.isTouching(invisible1) ||
        enemyG4.isTouching(invisible1) || enemyG5.isTouching(invisible1) || enemyG6.isTouching(invisible1) ||
